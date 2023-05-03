@@ -21,15 +21,26 @@ if (
   alert("Please choose a character length between 8 and 128.");
   return generatePassword();
 }
-
-var lowerCase = prompt("Would you like to include lowercase letters in you password? Yes = Yes & No = No");
-var upperCase = prompt("Would you like to include uppercase letters in you password? Yes = Yes & No = No");
+// changed car to lowercase letters from cap
+var lowercase = prompt("Would you like to include lowercase letters in you password? Yes = Yes & No = No");
+var uppercase = prompt("Would you like to include uppercase letters in you password? Yes = Yes & No = No");
 var numeric = prompt("Would you like to include numbers in you password? Yes = Yes & No = No");
-var specialChar = prompt("Would you like to include special characters in you password? Yes = Yes & No = No");
+var specialchar = prompt("Would you like to include special characters in you password? Yes = Yes & No = No");
+
+if (
+  lowercase === "Yes",
+  uppercase === "Yes",
+  numeric === "Yes",
+  specialchar === "Yes"
+) {
+  Math.floor(Math.random() * lowerCase.length, upperCase.length, numeric.length, specialChar.length);
+}
 
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numeric = "123456789";
 var specialChar = "!@#$%^&*";
+
+
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
