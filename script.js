@@ -12,6 +12,16 @@ function generatePassword() {
 }
 
 // Write password to the #password input
+var charLength = prompt("How many characters long would you like your password to be?")
+
+if (
+  charLength < "8" &&
+  charLength > "128"
+) {
+  alert("Please choose a character length between 8 and 128.");
+  return generatePassword();
+}
+
 var lowerCase = prompt("Would you like to include lowercase letters in you password? Yes = Yes & No = No");
 var upperCase = prompt("Would you like to include uppercase letters in you password? Yes = Yes & No = No");
 var numeric = prompt("Would you like to include numbers in you password? Yes = Yes & No = No");
