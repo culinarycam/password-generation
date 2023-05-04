@@ -28,7 +28,7 @@ if (
   includeLowercase === false &&
   includeUppercase === false &&
   includeNumeric === false &&
-  includeSpecialchar === false &&
+  includeSpecialchar === false 
   ) {
   alert("Please select atleast one of the selections.");
 } else {
