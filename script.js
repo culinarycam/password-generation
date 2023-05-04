@@ -2,25 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 function generatePassword() {
-  var lowercase = "abcdefghijklmnopqrstuvwxyz"
-
-  var result = prompt('Please enter a value bewteen 8 and 128')
-
-  var random = Math.floor(random() * lowercase.length);
-
-  console.log('RANDOM', random, lowercase[random]);
-}
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-  
-}
-
-var charLength = prompt("How many characters long would you like your password to be?")
+  var charLength = prompt("How many characters long would you like your password to be?")
 
 if (
   charLength < "8" &&
@@ -48,7 +30,16 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var numeric = "123456789";
 var specialChar = "!@#$%^&*";
+}
 
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
+
+  passwordText.value = password;
+  
+}
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
